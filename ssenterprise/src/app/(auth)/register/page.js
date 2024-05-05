@@ -36,38 +36,33 @@ const Register = () => {
 
   const Register = () => {
     if (AgreeT_C) {
-      if (Name && Email && Phone && Password && ConPass) {
+      if (Name && Email && Password && ConPass) {
         if (validator.isEmail(Email)) {
-          if (validator.isMobilePhone(Phone)) {
-            if (Password === ConPass) {
-              if (Password.length >= 8) {
-                axios
-                  .post(`${Server}/auth/register`, {
-                    username: Name,
-                    email: Email,
-                    phone: Phone,
-                    password: Password,
-                  })
-                  .then((resp) => {
-                    if (resp.data.status === "success") {
-                      toast.success("User registered successfully");
-                      setregisterStep(2);
-                    } else {
-                      toast.error(resp.data.message);
-                    }
-                  })
-                  .catch((err) => {
-                    toast.error("Failed to register user");
-                    console.log(err);
-                  });
-              } else {
-                toast.warn("Password must contain 8 characters");
-              }
+          if (Password === ConPass) {
+            if (Password.length >= 8) {
+              axios
+                .post(`${Server}/auth/register`, {
+                  username: Name,
+                  email: Email,
+                  password: Password,
+                })
+                .then((resp) => {
+                  if (resp.data.status === "success") {
+                    toast.success("User registered successfully");
+                    setregisterStep(2);
+                  } else {
+                    toast.error(resp.data.message);
+                  }
+                })
+                .catch((err) => {
+                  toast.error("Failed to register user");
+                  console.log(err);
+                });
             } else {
-              toast.warn("Password and Confirm password does not match");
+              toast.warn("Password must contain 8 characters");
             }
           } else {
-            toast.warn("Invalid phone number");
+            toast.warn("Password and Confirm password does not match");
           }
         } else {
           toast.warn("Invalid E-mail address");
@@ -166,11 +161,11 @@ const RegistrationStep = ({
     };
   }, []);
   const SendOTP = () => {
-    if (validator.isMobilePhone(Phone)) {
+    if (validator.isEmail(Email)) {
       toast.info("Sending OTP");
       axios
         .post(`${Server}/auth/register/otp`, {
-          phone: Phone,
+          email: Email,
         })
         .then((resp) => {
           if (resp.data.status === "success") {
@@ -205,18 +200,18 @@ const RegistrationStep = ({
       return (
         <div>
           <div className="flex flex-col w-full mt-2">
-            <label htmlFor="phone" className="mx-2 p-1 text-slate-400 text-sm">
-              Phone
+            <label htmlFor="email" className="mx-2 p-1 text-slate-400 text-sm">
+              Email
             </label>
             <input
               tabIndex="1"
-              type="tel"
-              id="phone"
+              type="email"
+              id="email"
               className="bg-zinc-800 p-4 rounded-xl border-2 outline-none border-opacity-50 border-transparent focus:border-violet-500 my-1 "
-              onChange={(e) => setPhone(e.target.value.toUpperCase())}
-              value={Phone}
+              onChange={(e) => setEmail(e.target.value)}
+              value={Email}
               disabled={UserOTP}
-              maxLength={10}
+              // maxLength={10}
             />
             {UserOTP ? (
               <div>
@@ -289,6 +284,7 @@ const RegistrationStep = ({
                   tabIndex="2"
                   type="email"
                   id="E-mail"
+                  disabled="true"
                   className="bg-zinc-800 p-2 rounded-xl border-2 outline-none border-opacity-50 border-transparent focus:border-violet-500 "
                   onChange={(e) => setEmail(e.target.value)}
                   value={Email}

@@ -93,14 +93,20 @@ export const Footer = () => {
               <p className="text-xl font-semibold text-center text-amber-500">
                 Contact Us
               </p>
-              <div className="flex mt-2 items-center">
+              <Link
+                href={"https://wa.me/+918889062910"}
+                className="flex mt-2 items-center"
+              >
                 <FaPhoneAlt className="text-xl m-2" />
                 +91 88890 62910
-              </div>
-              <div className="flex mt-2 items-center">
+              </Link>
+              <Link
+                href={"mailto:support@digitalcoach4u.com"}
+                className="flex mt-2 items-center"
+              >
                 <CiMail className="text-2xl m-2" />
                 suport@DigitalCoach4u.com
-              </div>
+              </Link>
             </div>
           </div>
         </div>

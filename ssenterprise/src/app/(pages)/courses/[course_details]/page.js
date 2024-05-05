@@ -219,10 +219,10 @@ const CourseDetails = ({ params }) => {
                     <div className="p-6 py-2">
                       <p className="text-sm">Powered by</p>
                       <Image
-                        src={razorpayImage}
-                        alt="Razorpay"
-                        height={15}
-                        width={150}
+                        src="/upi.png"
+                        alt="UPI"
+                        height={100}
+                        width={300}
                       />
                     </div>
                   </div>

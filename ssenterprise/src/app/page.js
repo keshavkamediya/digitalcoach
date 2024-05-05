@@ -30,9 +30,9 @@ export default function Home() {
       {/* Homepage */}
       <div className="h-fit">
         <div className="pt-32 relative">
-          <div className="absolute h-[100vh] w-[50%] bg-yellow-500 left-0 top-0 -z-50 rounded-[50%] blur-[300px] animate-pulse opacity-30"></div>
+          <div className="absolute h-[100vh] w-[50%] bg-yellow-500 left-0 top-0 -z-50 rounded-[50%] blur-[100px] sm:blur-[300px] animate-pulse opacity-30"></div>
           <div className="sm:items-center flex flex-col-reverse sm:flex-row  h-screen overflow-hidden sm:justify-between justify-end sm:-mt-16">
-            <div className="p-6 -mt-16 sm:mt-0 items-center  backdrop-blur-md backdrop-opacity-50">
+            <div className="p-6  sm:mt-0 items-center  backdrop-blur-md backdrop-opacity-50">
               <div className="max-w-screen-sm">
                 <p className="font-semibold text-4xl md:text-3xl text-start">
                   Learn to trade with India&apos;s Best Crypto Coach.

@@ -65,10 +65,10 @@ const Login = () => {
       <div className="flex flex-col max-w-screen-sm sm:px-10 p-5 w-full">
         <div className="flex flex-col w-full mt-4">
           <label htmlFor="username" className="mx-2 p-2 text-slate-400 text-sm">
-            E-mail or Phone
+            E-mail
           </label>
           <input
-            type="text"
+            type="email"
             id="username"
             value={Username}
             onChange={(e) => setUsername(e.target.value)}

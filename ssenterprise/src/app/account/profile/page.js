@@ -44,7 +44,7 @@ const Profile = () => {
                   <div className="text-slate-400 text-xs">
                     User ID : {User?.userId}
                   </div>
-                  <div className="text-sm">Phone : {User?.phone}</div>
+                  <div className="text-sm">Email : {User?.email}</div>
                 </div>
               </div>
               <div className="flex justify-end">
