@@ -19,7 +19,7 @@ const CourseCard = ({ course, button = true, coursePage }) => {
         <div className="absolute top-0 left-0 w-full h-full">
           <div
             title={course?.type}
-            className="whitespace-nowrap flex items-center cursor-pointer capitalize m-2 absolute top-0 right-0 bg-white w-fit pr-2 rounded-md text-slate-950 font-medium text-sm"
+            className="whitespace-nowrap flex items-center cursor-pointer capitalize m-2 absolute top-0 left-0 bg-white w-fit pr-2 rounded-md text-slate-950 font-medium text-xs"
           >
             <GoDotFill className="text-amber-500 animate-pulse m-1" />
             {course?.type} Level

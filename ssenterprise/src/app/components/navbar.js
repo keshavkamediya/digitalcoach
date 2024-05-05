@@ -62,7 +62,7 @@ export const Navbar = () => {
           >
             Home
           </button>
-          <button
+          {/* <button
             onClick={() => {
               router.push("/blog");
               setIsOpen(!IsOpen);
@@ -73,7 +73,7 @@ export const Navbar = () => {
             title="Blog"
           >
             Blog
-          </button>
+          </button> */}
           <button
             onClick={() => {
               router.push("/news");
@@ -98,9 +98,12 @@ export const Navbar = () => {
           >
             Courses
           </button>
-          <div className="mx-4 p-2 m-3 md:m-0 whitespace-nowrap flex items-center text-center text-slate-900 md:text-inherit font-medium">
+          <div className="mx-4 p-2 m-3 md:m-0 whitespace-nowrap flex items-center text-center text-slate-100 md:text-inherit font-medium justify-center w-[80%] self-center">
             {!UserData ? (
-              <Link href={"/login"} className="self-center">
+              <Link
+                href={"/login"}
+                className="bg-amber-500 p-3 rounded-full w-[80%] md:w-fit text-slate-900"
+              >
                 Sign Up / Sign In
               </Link>
             ) : (

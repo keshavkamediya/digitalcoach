@@ -48,9 +48,9 @@ export const Footer = () => {
                 </li>
                 {/* <li className="my-2 cursor-pointer">Crypto Signals</li> */}
                 <li>
-                  <Link href={"/blog"} className="my-2 cursor-pointer">
+                  {/* <Link href={"/blog"} className="my-2 cursor-pointer">
                     Blog
-                  </Link>
+                  </Link> */}
                 </li>
                 {/* <li className="my-2 cursor-pointer">Trading</li>
                 <li className="my-2 cursor-pointer">Brokers</li> */}
@@ -63,7 +63,7 @@ export const Footer = () => {
                   <Link href={"/courses"}>Free Crypto Courses</Link>
                 </li>
                 <li className="my-2 cursor-pointer">
-                  <Link href={"/courses"}>VIP Crypto Courses</Link>
+                  <Link href={"#"}>VIP Telegram Subscription</Link>
                 </li>
                 <li className="my-2 cursor-pointer">
                   <Link href={"/courses"}>Crypto Trading Course</Link>
@@ -95,7 +95,7 @@ export const Footer = () => {
               </p>
               <div className="flex mt-2 items-center">
                 <FaPhoneAlt className="text-xl m-2" />
-                +91 83199 32175
+                +91 88890 62910
               </div>
               <div className="flex mt-2 items-center">
                 <CiMail className="text-2xl m-2" />

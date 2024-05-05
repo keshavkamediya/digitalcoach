@@ -29,9 +29,10 @@ export default function Home() {
       {/* TickerTape */}
       {/* Homepage */}
       <div className="h-fit">
-        <div className="pt-32  bg-[url('/background.jpg')] bg-cover">
+        <div className="pt-32 relative">
+          <div className="absolute h-[100vh] w-[50%] bg-yellow-500 left-0 top-0 -z-50 rounded-[50%] blur-[300px] animate-pulse opacity-30"></div>
           <div className="sm:items-center flex flex-col-reverse sm:flex-row  h-screen overflow-hidden sm:justify-between justify-end sm:-mt-16">
-            <div className="p-6 -mt-20 sm:mt-0 items-center  backdrop-blur-md backdrop-opacity-50">
+            <div className="p-6 -mt-16 sm:mt-0 items-center  backdrop-blur-md backdrop-opacity-50">
               <div className="max-w-screen-sm">
                 <p className="font-semibold text-4xl md:text-3xl text-start">
                   Learn to trade with India&apos;s Best Crypto Coach.
@@ -56,7 +57,7 @@ export default function Home() {
               <div className="flex overflow-hidden rounded-tl-[500px] rounded-bl-[400px] justify-items-end max-h-[700px] max-w-[700px]">
                 <Image
                   alt="Ankit Pawar"
-                  src={"/front-image.jpg"}
+                  src={"/front-image (2).jpg"}
                   width={800}
                   height={800}
                   className="max-h-screen"
@@ -81,9 +82,9 @@ export default function Home() {
           <div className="flex items-center justify-center mt-10 p-2">
             <Link
               href={"/courses"}
-              className="bg-amber-500 p-3 text-lg font-semibold rounded-2xl"
+              className="bg-amber-500 p-3 text-lg font-semibold rounded-2xl text-center"
             >
-              Start With Basic Course Today
+              Start With Our New Crypto Course Series Today
             </Link>
           </div>
           <div className="flex flex-col items-center justify-center m-10">
@@ -106,7 +107,7 @@ export default function Home() {
         <div className="pt-10 flex flex-col items-center justify-center bg-white text-slate-950 bg-gradient-to-b from-white via-slate-100 to-white ">
           <div className=" text-3xl flex flex-col font-bold items-center mb-5">
             <p>Premium Plans</p>
-            <p className="text-base">👑 30-day money back gurantee</p>
+            <p className="text-base">Start earning today</p>
           </div>
           <div className="flex overflow-x-scroll mt-10 w-full lg:justify-center md:overflow-x-auto text-white">
             {Courses?.map((course, index) => {

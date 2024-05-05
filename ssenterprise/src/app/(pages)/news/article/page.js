@@ -21,7 +21,7 @@ const Article = () => {
         {Title}
       </div>
       <div className=" flex rounded-2xl overflow-hidden sm:w-1/2 self-center m-4">
-        <Image src={ImageUrl} alt="" />
+        <Image src={ImageUrl} width={1600} height={900} alt="" />
       </div>
       <div className="flex flex-col max-w-screen-sm">
         <p className="py-3 text-slate-300">Author : {Author}</p>
@@ -33,7 +33,7 @@ const Article = () => {
           Read more
         </Link>
       </div>
-      <p className="self-start text-slate-300 p-4">Source : {Source}</p>
+      {/* <p className="self-start text-slate-300 p-4">Source : {Source}</p> */}
     </div>
   );
 };

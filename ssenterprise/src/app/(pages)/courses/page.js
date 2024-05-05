@@ -34,7 +34,7 @@ const Courses = () => {
             forex signals today, or test our free forex signals on Telegram!
           </p>
           <button className="bg-yellow-500 text-slate-900 font-bold p-3 m-4 rounded-xl ">
-            JOIN VIP CRYPTO COURSE
+            JOIN CRYPTO COURSE
           </button>
         </div>
       </div>
